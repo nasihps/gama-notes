@@ -1,0 +1,105 @@
+read spring cloud gateway 
+
+we will try to do this all, today :
+	. cloud gateway , ports : Registry: 8761, HelloService: 8071, HelloClient: 8072, Gateway: 8070
+	. cloud config
+	. openfiegn   https://spring.io/guides/gs/gateway   http://httpbin.org 
+	. understand circuit breakers
+	. 
+	
+today's misc :
+	. https://spring.io/guides/gs/gateway
+	. to check yaml syntax errors : https://www.yamllint.com/
+	. 
+	. refer this for http request & response service :
+									https://httpbin.org/#/Anything
+	. 
+	
+-------------------------------------------------
+
+ConfigClient:
+	
+	add dependency : 
+				spring boot actuator
+				spring boot devtools
+				spring web
+				conflig client
+				
+	type in application properties :
+				spring.application.name=ConfigClient
+				spring.config.import=optional:configserver:http://localhost:8888
+				server.port=9099
+				
+	public class UseConfigController {
+		@Value("${server.port.key}")
+		String serverPort;
+		
+		@Value("${spring.application.name}")
+		String appName;
+		
+		@GetMapping
+		public String showProps() {
+			return "port = " + serverPort + " AppName " + " appName;
+		}
+	}
+
+
+New Project :
+
+	add dependency :
+				boot actuator
+				dev tool
+				openfeign
+				lombok
+				web
+				
+	create 3 packages : in src/main/java 
+						com.ust.feign.interfaces
+							FeignInterface.java(Interface)
+						com.ust.feign.model
+							Product.java
+						com.ust.feign.resources
+							
+						
+
+	Product.java
+		
+			@Data
+			@NoArgsConstructor
+			@AllArgsConstructor
+			public Class Product {
+				Integer productId;
+				String name;
+				String category;
+				String brand;
+				double price;
+			}
+			
+	FeignInterface.java
+			
+			@FeignClient(value="feignclient", url = "http://localhost:7081/product-service
+			public interface FeignInterface {
+
+				@RequestMapping(method=RequestMethod.GET, value="/products")
+				public List<Product> getProducts();
+
+				@RequestMapping(method= RequestMethod.GET, value= "/products-by-id/{id}", produces="application/json")
+				public Product getProductsById(@PathVariable ("id") int id);
+				
+				@RequestMapping(method=RequestMethod.GET, value="/products-by-category/{category}", produces="application/json")
+				public List<Product> getProductsByCategory(@PathVariable ("category") String category);
+
+			}
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------

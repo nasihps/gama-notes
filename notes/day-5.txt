@@ -1,0 +1,138 @@
+new annotations:
+	. @Repository
+	. @Controller - MVC Controller Classes [Learn Servlets and JSP , parallel to this ]
+	. @Lazy - used to indicate whether we have to load beans , lazily or not.
+	. @DependsOn - bean, on which this bean depends, to be created before this bean is created.
+	. @Lookup - indicates a method as a lookup method. It is best used for injecting a prototype-scoped bean into a singleton bean.
+	. CGLIB will generate the implementation of the method
+	. @Primary
+	. @Qualifier
+	----------------------------------------
+	. @ComponentScan
+	. @Configuration
+	. @Profile - Dev, Test, Prod
+	. @Import({JpaConfig.class,SchedulerConfig.class})
+	. @ImportResources({"spring-context.xml"})
+	. 
+---------------------------------------------
+
+REST : https://restapitutorial.com/
+	
+RESTful Services :
+	. 
+	
+----------------------------------------------
+Spring - Configuration files + (Autoconfiguration + Starters + Acutators + Devtools + Cloud tools + CLI) = Spring boot.
+Spring boot = Ten years of Spring experience - DRY (Do Not Repeat Yourself principle)
+Spring boot = Agile Development + dependencies starters + inbuilt tomcat server + In memory DB -> H2db 
+Spring boot - Microservices  -> RESTful -> 
+Client (end user, OR, Browser (user-agent, proxy), OR, application) & Server communication
+
+----------------------------------------------
+
+	http://localhost:8090/ (port number is to specified in "application.properties" as server.port=8090)
+	http://localhost:8090/rest/api.1.0/ (/rest/api.1.0 is given in the particular class as 'RequestMapping', for eg. in Greet.java)
+	
+
+----------------------------------------------
+
+@RestController = Controller + ResponseBody - <body>, http headers other than GET you will have body,  (pay load)
+				  we can send or write into response body using ResponseEnitity class . (ResponseEntity class is very Important in REST)
+Controller -> commit or render views using view technologies (HTML or JSP or Tiles or Velocity ... )
+
+@GetMapping - handler resource for HTTP GET requests 
+				input through get method: 1. query string (?name=value) is sent via requested url
+										  2. main url followed by a followard slash (/)
+										  3. @PathVariable to recieve this input 
+										  
+@PostMapping - handler resource for POST requests 
+@PutMapping - for PUT requests 
+@DeleteMapping - for DELETE 
+
+------------------------------------------------
+
+HTTP Headers -
+
+ 
+	HTTP headers are a critical component of HTTP requests and responses. They define the operating parameters of an HTTP transaction, 
+	providing important information about the request or response, and the client or server.
+	 
+	Types of HTTP Headers- 
+	----------------------
+	 
+	1.General Headers: Apply to both requests and responses, but do not have any relation to the data in the body of the request or response.
+	2.Request Headers: Contain more information about the resource to be fetched or about the client itself.
+	3.Response Headers: Contain information about the server and the response data.
+	4.Entity Headers: Contain information about the body of the resource, such as content length and content type.
+	 
+	 
+	Common HTTP Headers:
+	---------------------
+	 
+	General Headers-
+	-----------------
+	 
+			Cache-Control: Directives for caching mechanisms in both requests and responses.
+	 
+			Connection: Control options for the current connection.
+	 
+	 
+	Request Headers-
+	----------------
+	 
+			Accept: Media types that are acceptable for the response.
+	 
+			User-Agent: Information about the user agent originating the request.
+	 
+			Host: The domain name of the server and the TCP port number on which the server is listening.
+	 
+			Authorization: Credentials for HTTP authentication.
+	 
+			Content-Type: The media type of the body of the request.
+	 
+	 
+	Response Headers-
+	-----------------
+	 
+		Content-Type: The media type of the body of the response.
+	 
+		Server: Information about the software used by the origin server.
+	 
+		Set-Cookie: Set HTTP cookies.
+	 
+	 
+	Entity Headers-
+	----------------
+	 
+		Content-Length: The size of the resource, in decimal number of bytes.
+	 
+	 
+		Content-Encoding: The type of encoding used on the data.
+
+---------------------------------------------------------------
+
+HTTP Status Codes : https://restapitutorial.com/httpstatuscodes
+
+-----------------------------------------------------------------
+
+1. set headers
+2. recieve headers
+3. read headers
+4. write headers
+
+--------------------------------------------------------------------
+
+LOCAL TERMINAL AND BUILDING JAR :
+
+	- to build the jar file, go to right-click of project's package :
+		. click run as , then , click 'maven-install'
+
+
+	- to open spring tool suite's inner local terminal :
+		. right click project's package, then click , 'show in' , then click 'terminal
+
+
+	- after building the jar file, command this in spring tool suite's inner local terminal :
+		. java -jar target\demo-0.0.1-SNAPSHOT.jar
+		
+---------------------------------------------------------------------------

@@ -1,0 +1,53 @@
+(09-08-2024)
+--------------------------------------------------
+Today's agenda :
+	. CSS - propogate downwards
+	. styles at three levels: element levels - inline
+							  page levels - effetcs elements in a single page
+							  external style sheet - easy to change globally to all html files, maintainence easy
+							  will have least effect
+	
+	
+	
+	. Universal selector *{}
+	. Element/Type selector body, h1, ol, li, etc.
+	. Group selectors div, span
+	. Grouping selectors div P or div h2
+	. ID selectors #id
+	. Class selectors .classname
+	. Attribute selector
+	. Pseudo selector
+	. Pseudo nth child selector
+	. Pseudo Element
+	. Descendant selector p h3
+	. Child selector >
+	. Adjacent selector +
+	. General sibling selector ~
+	. Complex selectors - compound
+
+
+--------------------------------------------------
+
+
+
+--------------------------------------------------
+
+
+
+--------------------------------------------------
+
+
+
+--------------------------------------------------
+
+
+
+--------------------------------------------------
+
+
+
+--------------------------------------------------
+
+
+
+--------------------------------------------------

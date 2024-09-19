@@ -1,0 +1,77 @@
+1. Exceptions
+2. Swagger / Actuators
+3. Profiles 
+4. Microservices
+
+-----------------------------------------------------------
+exception :
+	we need @RestControllerAdvice
+	we need 
+	
+-----------------------------------------------------------	
+swagger : used in replace of 'postman'
+	-> add swagger dependency to project
+	-> go to localhost:8080/swagger-ui/index.html
+
+-----------------------------------------------------------
+
+study garbage collector in jvm :
+
+
+-----------------------------------------------------------
+
+actuator : 
+	-> add this in 'application.properties' : [ management.endpoints.web.exposure.include=* ]
+	-> go to : http://localhost:8080/actuator and http://localhost:8080/actuator/beans and http://localhost:8080/actuator/health and many more ....
+	
+
+-----------------------------------------------------------
+
+profile : 
+	. dev -> test -> production
+	. application-dev.properties
+	. applicatoin-test.properties
+	. application-prod.properties
+	
+	add the profile required to 'application.properties' :
+		spring.profiles.active=prod , or
+		spring.profiles.active=test , or
+		spring.profiles.active=dev
+	
+	run in terminal :
+		mvnw spring-boot:run -Dspring.profiles.active=dev
+		mvn spring-boot:run -Dspring.run.profiles=dev,test,prod
+		
+-----------------------------------------------------------
+today's annotations
+
+
+@GeneratedValue
+@Profile
+
+
+------------------------------------------------------------
+
+landline vs mobile
+	wired vs wireless
+	stationary vs portable
+	less digits vs more digits
+	
+service oriented architecture vs microservices vs monolith services
+REST is not a microservice
+-----------------------------------------------------------
+
+
+-----------------------------------------------------------
+
+
+
+-----------------------------------------------------------
+
+
+
+-----------------------------------------------------------
+
+
+
+-----------------------------------------------------------

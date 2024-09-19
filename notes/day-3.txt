@@ -1,0 +1,23 @@
+[top -> bottom]
+
+what type of dependency does spring support ?
+	. constructor
+	. setter
+	. other essential things -> scope, init, autowiring
+
+important features of spring:
+	. non-invasive (not affect your java)
+	. 
+
+today's agenda :
+	. dive more deep into spring IOC
+	. more maven concepts
+	. complete yesterday's task
+	. complete your family app
+
+
+logging :
+	. Logger logger = Logger.getLogger("TestShapes");
+	. logger.info(object+"") //info can contain only string, so convert into it by ' +"" '
+	. logger.info(doublt+"") //info can contain only string, so convert into it by ' +"" '
+	

@@ -1,0 +1,11 @@
+Install 
+	Spring Tool Suite 4.X
+	JDK 21
+	Maven 3.X
+	Eclipse
+
+Set environment variables
+	. refer = " https://www.baeldung.com/java-home-on-windows-mac-os-x-linux "
+
+learn CLASSPATH keyword
+

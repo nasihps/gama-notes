@@ -1,0 +1,69 @@
+(02-08-2024)
+-------------------------------------------------
+
+What all we did till now in AWS :
+	. Creating instance, security groups, keypair, inbound ports, SSH, putty on windows, VPC, subnets,
+		connecting through RDS, start, stop, terminate ec2.
+	. USERS, Groups, Roles, Policies.
+	. S3 Bucket how to create bucket, upload files, giving public access to the files, ACL Script, DB vs S3.
+	. RDS - launch RDS (mysql-server), connect with mysql-workbench(local machine).
+	. Integration - EC2 with RDS service
+	. 
+-------------------------------------------------
+
+Today's agenda :
+	. ElasticBeanstalk Springboot deployment
+	. AWS Codebase
+	. AWS ECR
+	. AWS Pipeline
+	. Complete AWS Pipeline
+	. 
+	
+-------------------------------------------------
+aws services created today :
+	. created 2 roles in IAM related to beanstalk
+	. created elastic bean stalk application
+	. 
+
+
+-------------------------------------------------
+Accessing AWS from local CLI
+
+	1. create a user with full admin privilieges
+		create user -> choose Attaches policies directly -> attach AdminstratorAccess 
+	2. once user is created -> select the user -> select security credentials tab -> choose access key > copy or dowload the accesskey and token 
+
+					 or
+					 
+	1. right click on aws root username and select securitycredentials  for creating accesstokens 
+	2. create access keys  save the accesskey and access token
+	**********************************             
+	3. download  AWSCLI tools.installer for windows 
+	4. perform the instructions to enable the powershell to access aws through powershell
+	5. check AWSCLI is installed :  > aws -v
+	6. aws configure 
+		AWS Access Key ID [None]:  enter access token
+		AWS Secret Access Key [None]: enter access key
+		Default region name [None]t : enter us-east-1
+		Default output format [None]: enter json
+	7. copy this command from ECR repository and paste it 
+		aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 905418250063.dkr.ecr.us-east-1.amazonaws.com
+	8. create a docker image with the name abrepoust:latest this you will do it in a folder which has a Dockerfile 
+	9. docker tag abrepoust:latest 905418250063.dkr.ecr.us-east-1.amazonaws.com/abrepoust:latest
+	10. docker push 905418250063.dkr.ecr.us-east-1.amazonaws.com/abrepoust:latest
+
+
+-------------------------------------------------
+
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------

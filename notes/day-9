@@ -1,0 +1,97 @@
+-------------------------------------------------
+spring cloud circuit breaker:
+	. microservices most of the time are orchestrated
+	. 
+	
+today's topics :
+	1. circuit breaker introduction
+	2. gateway load balancing ( we need three services 1. eurekalb, 2. servicelb, 3. gatewaylb)
+	3. sleuth
+	
+	
+cloud:gateway:discovery:locator:enables:true -to enable auto load balancing
+eureka:client:service-url:default-zone: http://localhost:8761/eureka
+
+
+
+-------------------------------------------------
+
+first class project :
+	. spring web
+	. resilience4g 
+	. actuators 
+	. devtools
+	
+add @CircuitBreaker(name="client-cb", fallbackMethod= "generateResponse") annotations in the project
+
+public String generateResponse(Throwable throwable){
+	return "The server is unavailable temporarily"
+
+-------------------------------------------------
+
+add this piece of code in any code : (good piece of info. )
+	. String port = environment.getProperty("server.port");
+	. return "Programming Microservice @ " + port;
+	. 
+
+-------------------------------------------------
+
+NOTE:
+ignore sleuth , not supported in latest versions
+hence we have to learn 'prometheus'.
+
+
+after lunch :
+	
+SLEUTH : Spring Sleuth is a tool that helps track what’s happening in a computer program, especially when it's doing many things at once.
+		 In short, Spring Sleuth helps you understand and trace the different steps of a program to find and fix issues more easily.
+	
+sleuth : application -> request -> thread -> needle haystack
+
+ [application name, traceId, spanID, export]
+ 
+Application name – This is the name we set in the properties file, and can be used to aggregate logs from multiple instances of the same application.
+
+TraceId – This is an id that’s assigned to a single request, job, or action. 
+		Something like each unique user initiated web request will have its own traceId.
+		
+SpanId – Tracks a unit of work. Think of a request that consists of multiple steps.
+		Each step could have its own spanId and be tracked individually. 
+		By default, any application flow will start with the same TraceId and SpanId.
+		
+Export – This property is a boolean that indicates whether or not this log was exported to an aggregator like Zipkin. 
+		Zipkin is beyond the scope of this article, but plays an important role in analyzing logs created by Sleuth.
+		
+ZIPKIN : It is a tool that supports SLEUTH.
+
+-------------------------------------------------
+
+4.00 PM
+
+Security & Application Security :
+	. 
+	. 
+	. 
+
+- Learn how to write filters (security - servlet filters)
+
+- spring security filter chain
+
+- OAuth
+
+- Single sign-on 
+
+we will start with 'Basic Authentication' :
+	. usernames and passwords are stored in memory
+	. LDAP (light-weight directory access protocol)
+	. 
+
+@EnableMethodSecurity
+
+
+
+
+-------------------------------------------------
+
+		
+

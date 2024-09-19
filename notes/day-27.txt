@@ -1,0 +1,42 @@
+(17-08-2024)
+-------------------------------------------------
+
+	Angular Day 3 :
+		. Pipes
+		. Bootstrap in angular , how to integrate it.
+		. Forms
+		. Parent child components
+
+-------------------------------------------------
+
+	BOOTSTRAP
+
+	Installing Bootstrap into App's Angular Directory :
+	
+		. npm install --save bootstrap@5.3.2           [for angular 18]
+		. after installing add the bootstrap.min.css and bootstrap.min.js into angular.json !!
+				. these files are from - inside the directory of the created app - go to node-modules - go to bootstrap - go to dist - 
+											- inside js .js file will be there, and inside css .css file will be there.
+
+-------------------------------------------------
+
+	All Angular Commands (progress):
+		. ng new <myapp>
+		. ng serve --open
+		. ng g c <component-name>
+		. ng g s <service-name>   
+		. ng test
+		
+	Notes :
+		. to provied HttpClient in angular , edit app.config.ts file , and in providers add 'provideHttpClient()' in it.
+		. also , enable `@CrossOrigin` in Spring Controller file.
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------

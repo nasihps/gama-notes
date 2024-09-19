@@ -1,0 +1,22 @@
+(19-08-2024)
+-------------------------------------------------
+
+ANGULAR DAY 4
+
+-------------------------------------------------
+
+	To Do :
+		. Add form input constraints in login and signup page.
+		. Try SwitchCase to swap between 'Components' in angular
+		. From 'Form' App remove 'Filter' App into Its own App.
+		
+
+-------------------------------------------------
+
+	Today : 
+		. Forms - Reactive
+		. Forms - Validation
+		. Design Patterns
+		. Http Services - connecting external API's
+
+-------------------------------------------------

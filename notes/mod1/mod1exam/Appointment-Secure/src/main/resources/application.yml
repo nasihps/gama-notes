@@ -1,0 +1,16 @@
+
+server:
+  port: 9101
+spring:
+  application:
+    name: appointmentservice
+  datasource:
+    url: jdbc:mysql://localhost:3306/dental
+    username: root
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true

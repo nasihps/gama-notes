@@ -1,0 +1,95 @@
+
+--------------------------------------------------------------------------------------------------
+package com.wecp.library.controller;
+
+@RestController
+@RequestMapping("/api/v1")
+public class LibraryController {
+
+    
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private IssueRepository issueRepository;
+
+
+    @PostMapping("/issue-book")
+    public ResponseEntity<Issue> issueBook(@RequestBody Issue issue) {
+        Optional<User> userOpt = userRepository.findById(issue.getUser().getId());
+        if(userOpt.isPresent() && userOpt.get().getSubscribed()){
+            Issue savedIssue = issueRepository.save(issue);
+            return ResponseEntity.ok(savedIssue);
+        }
+        else
+        {
+            throw new UserNotSubscribedException();
+        }
+    }
+
+    
+    @PostMapping("/user")
+    public ResponseEntity<User> createUser(@RequestBody User user) {
+        User savedUser = userRepository.save(user);
+        return ResponseEntity.ok(savedUser);
+    }
+
+    
+    @GetMapping("renew-user-subscription/{id}")
+    public ResponseEntity<User> renewUserSubscription(@PathVariable Long id) {
+        Optional<User> userOpt = userRepository.findById(id);
+        if(userOpt.isPresent()){
+            User user = userOpt.get();
+            user.setSubscribed(true);
+            userRepository.save(user);
+            return ResponseEntity.ok(user);
+        }
+        else {
+            return ResponseEntity.noContent().build();
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------
+
+package com.wecp.library.security;
+
+@EnableWebSecurity
+public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter{
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception{
+        http.csrf()
+			.disable()
+			.authorizeRequests()
+			.antMatchers("/api/v1/issue-book")
+			.permitAll()
+			.anyRequest()
+			.authenticated()
+			.and()
+			.httpBasic();
+    }
+
+    /*@Bean
+    public PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }*/
+
+}
+
+--------------------------------------------------------------------------------------------------
+
+package com.wecp.library.repository;
+
+public interface UserRepository extends JpaRepository<User, Long>{
+
+}
+
+--------------------------------------------------------------------------------------------------
+
+package com.wecp.library.repository;
+
+public interface IssueRepository extends JpaRepository<Issue, Long>{
+}
+
+--------------------------------------------------------------------------------------------------

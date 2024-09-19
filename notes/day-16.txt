@@ -1,0 +1,105 @@
+(03-08-2024)
+-------------------------------------------------
+ECR
+Codebuild
+
+-------------------------------------------------
+
+Today's Steps : 
+
+	Steps to build ECS on AWS
+Boot on AWS-ECS
+1. create Dockerfile 
+2. create ECR repo
+3. create a buildspec.yml file in the sprinboot project root
+ 
+   pre_build        
+                       build jar, goto repo login create a commit hash extract first 7 chars and tag it to create a unique image name
+   build
+                 
+   post_build 
+
+Note:   push all the changes  made to springboot project to github 
+
+4.0 create a role for codebuild to access ECS 
+ bootdocker-codebuild-eks-role
+        Two permissions:
+		AmazonEC2ContainerRegistryFullAccess
+		AmazonEC2ContainerRegistryPowerUser
+		
+		
+
+    
+4.1 Create a codebuild project 
+    1. name
+	 2. link to github
+	 3. give a role-name choose the role created in step 4.0
+	 4. create build project 
+	 5. Start build  and verify ECR registry 
+	 
+5. Goto ECS
+	 1. create Task definitions
+	  2. launch type - Fargate
+	  3. Container -1 give ECR container registry name and URI (dont give image uri) 
+	  4. container port 8080 app protocol http
+	  5. create 
+	   6. create cluster 
+	    7.name 
+		8. infrastructure Fargate
+		9. create
+		 10. goto newly created cluster 
+		 11. click on create service 
+		 12. compute options   choose  LaunchType -
+           13. capacity provider : 		 AWS Fargate
+		   14. Platform version : LATEST 
+		 15. click Application Type : Service
+       16. Tasks definitions -  
+              Family 
+              Choose the task definition created in steps 1-5  Revision : LATEST 
+			  
+ 	17. service name : bootdocker-service 		  
+	18. Networking : create new security group 
+	19. Allow all traffic coming from anywhere
+	20. Allow all TCP  coming from anywhere 
+	21. create 
+	 after created successfully 
+	22.   go to the cluster -> open cluster -> click on created service ->  tasks -> open task  -> you will find a public ip click on that public ip
+	
+	23. edit codebuild project -> priamary source webhook events ->  check the checkbox - Rebuild every time a code change is pused to repository  click on update project 
+	----------------
+	6. Build pipeline 
+	   1. name
+	   2. new service role - accept the name given
+	   3. next
+	   4. source provider GitHub connect to GitHub
+	   5. choose repo - bootdocker 
+	   6. branch master 
+	   7. GitHub webhooks 
+	   next 
+	   8. build provider - choose AWS Codebuild  
+	   9. choose codebuild project created in step 4.1 
+	   10.  single build 
+	   11. next 
+	   12. Add Deploy stage - choose Amazon ECS container    -watch the region carefully all services must be in same region 
+	   13. choose cluster name created in step 5.6
+	   14. choose service name create in step 5.17
+	   15. next
+	   16. create pipeline 
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------

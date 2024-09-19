@@ -1,0 +1,37 @@
+(20-08-2024)
+-------------------------------------------------
+
+	ANGULAR DAY 5
+
+-------------------------------------------------
+
+	Presentation tips :
+		. spend time about life cycle of the angular application and the life cycle of asynchronous request
+		. then talk about testing , exception handling , security
+		. then you can talk about binding , how data binding works
+
+-------------------------------------------------
+
+	Today:
+		. Promise vs Observable
+			- Promise produces in one large chunk - vs - Observable produces in streams , small chunks.
+			- Promise produces even if there is no consumer - vs - Observable will produce only when there is a subscriber
+			- Promise communicates synchronously - vs - Observable communicates in asynchronous mode
+			- Promise blocks the client during communication - vs - Observable doesn't block the communication and 
+																	needs a callback to invoke when it completes
+																
+		. CRUD Operations using HTTP
+		. Angular JWT Token Authentication and Authorization
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------

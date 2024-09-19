@@ -1,0 +1,44 @@
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+today's topics (29-07-2024)
+
+ 	. jenkins - pipeline [ script based (Groovy) , UI based ]
+			-> pushing your source code to repo -> run quality gates (clean code) -> Testing -> packaging -> deploy/install -> release
+	. circuit breaker - Resilience4j
+	. Prometheus or will start AWS (prometheus some other day)
+	. Docker 
+	. Migrate your store project to Spring boot - microservices, swagger-ui, 
+
+-------------------------------------------------
+documents to read :
+	. resilience4j.readme.io/docs/circuitbreaker
+	. 
+
+
+-------------------------------------------------
+DOCKER:
+	. Ansible (Infrastructure as a code)
+	. Chef and Puppet (makes one happy , if he's interested in linux and machine-configurations)
+	. docker steps :
+		1. create a Docker file, without any extension.
+		2. define the libs/bins (libraries and binaries).
+		3. builder an image with that docker file.
+		4. run the image-file to instantiate the container. (container - runtime instance of an image, which is based on the docker file specs. )
+	.
+	. docker file basics :
+		-> 
+
+
+-------------------------------------------------
+
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------

@@ -1,0 +1,35 @@
+(08-08-2024)
+-------------------------------------------------
+Today's agenda :
+	. Re-create everything we did yesterday,  using 'div' tag.
+	. Create your own website using HTML 5 semantic tags
+	. Bootstrap
+
+-------------------------------------------------
+
+Understand :
+	. Meta Tags
+	. SE Optimization
+	. Responsiveness
+	. 
+
+-------------------------------------------------
+videos to watch :
+	. steve job 2 videos : (i) graduation at standford
+							(ii) he enrolled for one course but didn't attended it, but instead went for caligraphy class
+							
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------

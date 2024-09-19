@@ -1,0 +1,32 @@
+Saturday : 
+
+
+
+-------------------------------------------------
+today's topics :
+	. JWT
+	. Database Authentication
+	. Jenkins 
+		. continuos integration tool
+		. it gives feedback immediately
+		. 
+	. 
+
+-------------------------------------------------
+learn :
+	. filter chain
+	. servlets
+	. 
+
+
+-------------------------------------------------
+jenkins :
+	. command to install jenkins, go to jenkins directory, -> '   .\jenkins.exe start   '
+	. go to port 8080
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------

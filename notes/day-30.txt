@@ -1,0 +1,44 @@
+(21-08-2024)
+-------------------------------------------------
+
+	ANGULAR DAY 6
+	
+-------------------------------------------------
+
+--> Today's Agenda :
+	. Angular life cycle hooks - call back methods
+	. Routing
+	. Karma Testing (*IMP*)
+	. Angular Files
+	
+-------------------------------------------------
+
+-->	LIFE CYCLE OF ANGULAR :
+		-----
+		  (i) constructor
+		 (ii) ngOnChanges
+		(iii) ngOnInit
+		 (iv) ngDoCheck
+		-----
+		  (v) ngAfterContentInit
+		 (vi) ngAfterContentChecked
+		(vii) ngAfterViewInit
+	   (viii) ngAfterViewChecked
+		-----
+	     (ix) ngOnDestroy
+		-----
+	Notes : constructor is not a life-cycle method or part of it, but it the one that gets called when angular start. (IMP)
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------

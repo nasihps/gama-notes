@@ -1,0 +1,57 @@
+(05-04-2024)
+-------------------------------------------------
+movies:
+	. the condemned 2007
+-------------------------------------------------
+Book:
+	. Java: How to Program by Paul Deital
+	
+Learn 50 Algorithms
+Hackerank - Badges 
+Certificates
+Phd
+
+-------------------------------------------------
+Today's agenda:	
+	. RabbitMQ done
+	. Kafka done
+	. AWS
+	. Lambda
+	. SNS
+
+
+-------------------------------------------------
+
+finds the product -> adds the product to cart -> clicks 'place order' -> displays the summary of order and address -> choose payment method -> 	
+					complete the payment -> displays receipt
+
+-------------------------------------------------
+ 
+loose coupling:
+	. loose coupling -> abstractin -> interfaces -> messaging systems helps to build loosely coupled classes.
+	
+	. an approach to designing interfaces across modules to reduce the interdependencies across modules or components
+	. the components are independent of each other. Each component has its own well-defined interface and communicates with other components through standardized protocols.
+	. In loose coupling, a method or class is almost independent, and they have less depended on each other. If the classes or methods know less about each other, the more loosely coupled structure comes into existence.
+	. 
+
+
+What is serialization ?
+	. 
+-------------------------------------------------
+
+apache kafka vs jms :
+
+	1. apache kafka is pull-type , consumers pull messages from broker.
+	   jms is a push type.
+	2. kafka has simplifed and easy routing systems
+	   jms has complicated one.
+	3. kafka stores messages for a definite amount of time, whether they are delivered or not.
+	   jms deletes them permanently after delivering them.
+	4. kafka doesnt use queueing mechanism, it use pub-sub model(publisher-subscriber) model.
+	   jms uses queueing mechanisms.
+	5. kafka is a high throughput, while jms is a low throughput.
+	6. kafka is high scalable and availability while jms is low scalable and moderate availability.
+	7. kafka is streaming based, while jms is short-messages.
+
+-------------------------------------------------

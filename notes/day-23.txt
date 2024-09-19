@@ -1,0 +1,133 @@
+(12-08-2024)
+-------------------------------------------------
+
+	JAVASCRIPT
+
+-------------------------------------------------
+
+. implemented to support DOM 
+. no types
+. all types are inferred
+. object based procedural/structured language, libraries, interpretted
+. everything is a funciton
+. 
+
+-------------------------------------------------
+
+		alert("Hello Boys, ssupp!?")
+        confirm("save?")
+        var message = prompt("Enter your location : ", message);
+        alert(message);
+        var x = 10;
+        alert(typeof(x));
+        x = "welcome";
+        alert(typeof(x));
+        x = true;
+        alert(typeof(x));
+        var y = "10" / 10 ; //converts "10" string to number 10 
+        alert(y);
+		
+		var str = "hello";
+        let str1 = "let hello";
+        const str2 = "const hello";
+        document.writeln(
+            "WELCOME BOSS !  " + str + " : " + str1 + " : " + str2
+        );
+        console.log("loggggggg");
+
+
+        var temp = 0;
+		for (var index = 6; index > -5; index--) {
+            if(index>0){
+                temp++
+                document.write(
+                    `<h${temp}>JAVASCRIPT</h${temp}>`
+                );
+            }
+            else{
+                temp--;
+                document.write(
+                    `<h${temp}>JAVASCRIPT</h${temp}>`
+                );
+            }
+        }
+
+		-------------------------------
+        var data = [3, 4, 9, 78, 34, 55];
+        console.log(data);
+        data.push(100);
+        console.log(data);
+        var i = data.pop();
+        console.log(data);
+
+        data.shift();
+        console.log(data);
+        data.unshift(100, 200, 300);
+        console.log(data);
+
+        data.pop()
+		-------------------------------
+        var data=[3,4,5,6,7,8,9,10];
+        function sumData(){
+            var sum=0;
+            for(i=0;i<data.length;i++){
+                sum+=data[i];
+            }
+            alert("Sum of data is "+sum);
+            return sum;
+        }
+        sumData();
+        -------------------------------
+        var data=[3,4,5,6,7,8,9,10];
+        function sumData(){
+            var sum=0;
+            data.forEach((item) => {
+                sum+=item
+            });
+            alert("Sum of data is "+sum);
+        }
+        sumData();
+		-------------------------------
+		function factorial(n){
+            var i = 1;
+            var fact = 1;
+            while(i<=n){
+                fact *= i;
+                i++;
+            }
+            return fact;
+        }
+        
+        var num = parseInt(prompt("Enter a number to compute factorial : "));
+        document.writeln(
+            `<h1>${factorial(num)}<h1>`
+        );
+		-------------------------------
+		var rows = parseInt(prompt("Enter the number of rows of the table : "));
+        var columns = parseInt(prompt("Enter the number of columns of the table : "));
+        document.write(`<table style="font-size: 30px; border: 1px solid black">`);
+        for (var row = 1; row <= rows; row++){
+            document.write(`<tr>`);
+            for(var column = 1; column <= columns; column++){
+                document.write(
+                    `<td style="border: 1px solid black">&emsp;${row*column}&emsp;</td>`
+                );
+            }
+            document.write(`</tr>`);
+        }
+        document.write(`<table>`);
+		-------------------------------
+		const members = ["John", "Joe", "Jane", "Joel"];
+        const nominees = members.map((member) => { return member + " joined the contest. " });
+        alert(nominees);
+		-------------------------------
+		
+		-------------------------------
+		
+		-------------------------------
+
+-------------------------------------------------
+
+. CALL BACK FUNCTIONS IN JAVASCRIPT (IMPORTANT)
+
+-------------------------------------------------

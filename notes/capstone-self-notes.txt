@@ -1,0 +1,143 @@
+-------------------------------------------------
+linkedin.com/pulse/understanding-high-level-design-hld-low-level-lld-
+
+DOCUMENTATION : 
+		1. Scope : 
+			. Requirements : [ Functional and Non-Functional Requirments and Technologies used ]
+
+
+		2. During design part - project divided into 2 : 
+					i.  High Level design document : - Architectural Overview :
+															. defining major components, modules and its interconnections
+															. for this we use - use case diagrams
+													 - Functional Specifications: 
+															. use sequence diagrams
+															. functional interactions between components (like interaction in login)
+													 - System interactions : 
+															. defining input / output interfaces 
+															. and specify how they communicate (wireframes)
+													 - Performance considerations : 
+															. response times, processing speed and scalability.
+					
+					ii. Low level design document : (getting just before code)
+													- drawing components diagrams using uml
+													- class diagrams and interface diagrams
+													- security - postman api testing & jwt
+													- package structures / package diagram
+													- ER diagrams + 'sample class diagram'
+													- (components diagram, class/interface diagrams, ER diagrams, Package diagrams)
+													- write database , tables created, write / establish their relationships.
+		
+			
+-------------------------------------------------
+
+2 documents:
+	. BRD (business requirement document) (no diagrams)
+	. Functional document (this contains diagrams)
+
+done items :
+	1. use case diagram
+	2. sequence diagram
+	3. wireframe
+	4. ER diagram
+	5. class diagram
+	6. architectural diagram (pending)
+	7. activity diagram (maybe)
+kill port usage :
+	in cmd :
+				netstat -ano | findstr :<port_number>
+				taskkill /PID <PID> /F                        //PID is the last column in result of netstat command
+
+
+-------------------------------------------------
+
+localhost:0000/projects/
+localhost:0000/projects/project-id/
+localhost:0000/projects/project-id/tasks 
+localhost:0000/projects/project-id/tasks/task-id
+
+
+Projects :
+
+	1. Create project
+		i. leadID
+		ii. project details (name, description, ...)
+	2. Update Project
+		i. leadID
+		ii. projectID
+		ii. project details.
+	3. delete project 
+		i. leadID
+		ii. projectID
+	4. fetch project
+		i. projectID
+	5. create tasks
+		i. authorized by Leadid
+		ii. projectID
+		iii. taskdetails(status)
+	5. update tasks
+		i. authorized by Assignee
+		ii. projectID
+		iii. taskID
+		iv. 
+
+
+-------------------------------------------------
+
+
+
+
+1. Security : 
+	. Login
+	. Register
+	. Change Password
+	. Delete Account
+
+2. Home Page - List of all projects. 
+			 - Left Side Nav -> Create project, Settings, Log out.
+			 - Right Side Aside -> Links to various communication channels.
+   Project Dashboard 
+   
+-------------------------------------------------
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+-------------------------------------------------
+
+This chat is for my Angular Front End and Spring Boot Java Backend Project.
+I have to create a project using angular for frontend and spring boot java for backend. The problem statement scenario is " The shift to remote work has brought about significant challenges in team coordination and task management. Teams distributed across various time zones often struggle with asynchronous communication, leading to delays in project timelines and misunderstandings about task responsibilities. Additionally, the lack of face-to-face interaction can result in a disconnect between team members, making it harder to maintain accountability and ensure that everyone is on the same page. Traditional task management tools may not provide the level of flexibility needed to accommodate different work styles and time zones, leaving gaps in communication and collaboration. "
+
+
+The solution we are kind of bringing up is a website, where there are different users who all can register, login and configure their accounts. Inside the website, each user can create if wanted a project and invite team members to it. Inside the project dashboard, the project leader, the one who created the project can assign tasks to project members. There will be a progress columns like (to-do, in-progress, testing and completed). This is displayed in the dashboard of the project. When a project member logs in to the website, he can see the project lists, and can click one of them to see all the details of that project, pending tasks by other members, etc. Also there will be a section mentioning his pending tasks. Also the website will have a settings page to configure the user account, like changing password. This is the basic idea of the project, which is transparent task management. 
+
+Apart from this the main other pillar of the project is time-zone management. Each user can mention his time zone in their own profile. When a project leader creates and assigns tasks to a team member, the deadline mentioned in the team leader's time zone should be converted to the project member's time zone. 
+
+When coming to the type of users, there will be an 'admin' role, and 'user' role.
+Also there will be a small implementation of asynchronous communication in the project, which is basically to inform/notify all the respective users, when the project leader assign tasks to them, and to notify/inform the project leader whenever any project member completes any task. Also to remind the respective team member whenever his/her tasks are approaching due date/deadline.
+
+
+Update this in your memory.
+My project idea is completed as of now. If there are any additional to this, I will let you know.

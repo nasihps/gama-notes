@@ -1,0 +1,16 @@
+
+pojo -> bean -> component
+
+today's JDBC activity:
+	. create schema through workbench (password of root in VMCloud -> pass@word1)
+	. create table through mysql client command line
+	. code in eclipse
+	
+annotations:
+	@Autowired
+	@Component
+	@ComponentScan
+	@Configuration
+	@Service
+	@Bean
+	

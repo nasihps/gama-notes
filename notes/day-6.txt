@@ -1,0 +1,68 @@
+
+-------------------------------------------------------
+New Annotations:
+
+	. @SpringBootApplication
+	
+--------------------------------------------------------
+
+other way to build the project :
+	. right click the project package and click 'show in' terminal
+	. then in terminal , command this " .\mvnw spring-boot:run " (maven is requird to run this command)
+	
+-----------------------------------------------------------
+
+project naming scheme :
+
+	com.iiht.rest
+	first-restapi-jpamysql
+	0.0.1-SNAPSHOT
+	Demo project for Spring Boot
+	com.iist.restjpa
+
+dependencies :
+	spring boot devtool
+	mysql driver
+	spring web
+	spring boot actuator
+	spring boot JPA
+	lombok
+	
+---------------------------------------------------------------
+
+ORM Techonologies
+	. object relational mapping
+	. orm is a programming technique for automatic mapping and converting data
+	. orm creates a 'virtual object database'
+-------------------------------------------------------------------
+
+controller -> service -> repository -> database
+
+-------------------------------------------------------------------
+
+pgadmin - native web software
+psql - commandline tool
+
+-------------------------------------------------------------------
+
+JPA (Java Persistence API) :
+	.
+
+-------------------------------------------------------------------
+
+maven support : jar , war , pom
+
+-------------------------------------------------------------------
+ 
+CREATE TABLE DEPT (DEPTNO INT PRIMARY KEY, DNAME VARCHAR(14), LOC VARCHAR(13));
+
+INSERT INTO DEPT VALUES (10, 'ACCOUNTING', 'NEW YORK');
+INSERT INTO DEPT VALUES (20,ACCOUNTING',  ACCOUNTING' ,'DALLAS');
+INSERT INTO DEPT VALUES (30, ACCOUNTING', 'CHICAGO');
+INSERT INTO DEPT VALUES (40, ACCOUNTING', 'INDIA');
+ 
+------------------------------------------------------------------- 
+
+https://dev.to/ritaly/the-simplest-guide-to-curl-for-rest-api-request-35ii
+
+-------------------------------------------------------------------

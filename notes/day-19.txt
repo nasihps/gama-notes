@@ -1,0 +1,25 @@
+(07-08-2024)
+-------------------------------------------------
+Agenda for the week : (HTML, CSS, JS)
+
+
+-------------------------------------------------
+Today's Discussion:
+	. HTML5 CSS and JS
+	. W3C
+	. SGML
+	. HTML vs XML
+	. HTML is presentation language.
+	. Parsing
+	. Then designing
+	. Process after page requested
+	----
+	. What is parsing and DOM (Document Object Model)
+	. 
+
+
+-------------------------------------------------
+
+
+
+-------------------------------------------------

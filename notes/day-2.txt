@@ -1,0 +1,160 @@
+maven repository website -> spring core 4.0.x, spring context 4.0.x, 
+
+learning java-logging
+
+------------------------------------------------------------------------------------
+
+#sample_implementation
+
+ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+Object obj = context.getBeans("example-bean-name");
+Member members = (Member) obj; //where 'Member' is a class of type 'example-bean-name'
+
+
+------------------------------------------------------------------------------------
+
+
+<bean name="countryEgg" class="com.ust.products.Egg">
+	<constuctor-arg name="id" value="101"></constructor-arg>
+	<constructor-arg name="description" value="Heritage"></constructor-arg>
+	<constructor-arg name="qty" value="25"></constructor-arg>
+</bean>
+<bean name="countryEgg1" class="com.ust.products.Egg">
+	<constuctor-arg name="id" value="102"></constructor-arg>
+	<constructor-arg name="description" value="Heritage"></constructor-arg>
+	<constructor-arg name="qty" value="35"></constructor-arg>
+</bean>
+<bean name="countryEgg2" class="com.ust.products.Egg">
+	<constuctor-arg name="id" value="103"></constructor-arg>
+	<constructor-arg name="description" value="Heritage"></constructor-arg>
+	<constructor-arg name="qty" value="20"></constructor-arg>
+</bean>
+<bean name="eggList" class="java.util.ArrayList">
+	<constructor-arg>
+		<list>
+			<ref bean="countryEgg"/>
+			<ref bean="countryEgg1"/>
+			<ref bean="countryEgg2"/>
+		</list>
+	</constructor-arg>
+</bean>
+
+------------------------------------------------------------------------------------
+
+class Egg{
+		private String type;
+		private int expiry-date;
+		private float price;
+		private int quantity;
+	}
+	
+	public addEgg(String type, int expiry-date, float price, int quantity, ArrayList<Egg> egg-list){
+		Egg newEgg = new Egg();
+
+		newEgg.type = type;
+		newEgg.expiry-date = expiry-date;
+		newEgg.price = price;
+		newEgg.quantity = quantity;
+
+		egg-list.add(newEgg);
+	}
+
+	public static void main(String[] args){
+		ArrayList<Egg> egg-list = new ArrayList<Egg>();
+		addEgg("broiler", "20072024", "6.5f", "35", egg-list); 
+		
+	}
+
+
+---------------------------------------------------------------------------------
+create Class Store :
+	. Eggs 
+	. Milk
+	. Chocolates
+	. Apples
+	. Bread
+
+	- Eggs in ArrayList
+	- Milk in HashSet
+	- Chocolates in LinkedList
+	- Apples on TreeSet
+	- Bread on Queue
+
+	* Put all the above in HashMap<Integer, Collection>
+
+	Answer :
+	
+	class Egg{
+		private String type;
+		private int expiry-date;
+		private float price;
+		private int quantity;
+	}
+	class Milk{
+		private int batch-no;
+		private String brand;
+		private String type;
+		private float price;
+		private int quantity;
+		private int expiry-date;
+	}
+	class Chocolate{
+		private String brand;
+		private String origin;
+		private float price;
+		private int quantity;	
+		private int expire-date
+	}
+	class Apple{
+		private String origin;
+		private String type;
+		private float price;
+		private float quantity;
+	}
+	class Bread{
+		private int batch-no;
+		private String brand;
+		private float price;
+		private int quantity;
+		private int expire-date;	
+	}
+	
+
+	Egg egg1 = new Egg();
+	Egg egg2 = new Egg();
+	Egg egg3 = new Egg();
+	ArrayList<Egg> egg-list = new ArrayList<Egg>();
+	egg-list.add(egg1);
+	egg-list.add(egg2);
+	egg-list.add(egg3);
+
+	Milk milk1 = new Milk();
+	Milk milk2 = new Milk();
+	HashSet<Milk> milk-set = new HashSet<Milk>();
+	milk-set.add(milk1);
+	milk-set.add(milk2);
+
+	Chocolate choco1 = new Chocolate();
+	Chocolate choco2 = new Chocolate();
+	LinkedList<Chocolate> choco-list = new LinkedList<Chocolate>();
+	choco-list.add(choco1);
+	choco-list.add(choco2);
+
+	Apple apple1 = new Apple();
+	Apple apple2 = new Apple();
+	TreeSet<Apple> apple-set = new TreeSet<Apple>();
+	apple-set.add(apple1);
+	apple-set.add(apple2);
+
+	Bread bread1 = new Bread();
+	Bread bread2 = new Bread();
+	.........
+	Bread bread-object = new Bread();
+	Queue<bread-object> bread-queue = new LinkedList<bread-object>();
+
+	
+	
+
+	
+
+

@@ -1,0 +1,67 @@
+Referring Java Libraries :
+	google -> 'javadocs'
+	google -> 'springdocs'
+
+
+SOA - Service Oriented Architecture
+	. SOA principles are realised and implemented using 'Web Services'
+	. We have two types of Web Services :   [a] Simple Object Access Protocol (SOAP)
+						[b] Representational State Transfer (REST)
+
+
+LIMITATIONS OF MONOLITH (eg: ERP, SAP):
+	. Difficult to integrate
+	. Not easy to scale (less scalability)
+		- Scaling is of two types , (a) horizontal (b) vertical
+	. Not easy to upgrade.
+
+
+keywords :
+	. instanceof
+	. throws 
+	. transcient	
+	. default - switch case, default methods of a functional interface
+	. synchronized - Mutex
+
+class Perfume{
+	private String origin;
+	private int alcohol_content;
+	private int gas_percentage;
+	public String brand;
+	private String gender;
+}
+
+class Diamond{
+	private float purity;
+	private origin;
+	public int price; 
+}
+
+
+Things to learn :
+	. What are the types of servers and their configurations ?
+	. Cloud (Iaas, Paas, SaaS) fig.
+	. How software is converted into an image (cloud) ?
+	. WSL
+	. 
+
+
+Today's Topics :
+	. Middleware example softwares (IBM Bluemix, Tibco, Web Objects)
+	. Enterprise Service Bus
+
+
+Things required to build an application :
+	. Frontend
+	. Middleware
+	. Api
+	. Backend
+	. Database
+	. Server
+	. Virtualization
+
+
+Goals after training.
+	. Host your own website.
+	. 
+	.

@@ -1,0 +1,135 @@
+JAVASCRIPT
+-------------------------------------------------
+
+function factorialsum(array_length, arr) {
+
+	function factorial(n) {
+		if (n==0 || n==1) 
+			return 1;
+		for (let i=2; i<=n ; i++) {
+			result*=i;
+		}
+		return result;
+	}
+	
+	function digitSum(n){
+		while(n>=10){
+			let sum = 0;
+			while(n>0){
+				sum += n%10;
+				n = Math.floor(n/10);
+			}
+			n=sum;
+		}
+		return n;
+	}
+	
+	function isSpecial(num, factorialSum) {
+		const digits = num.toString().split('').map(Number);
+		const factDigits = factorialSum.toString().split('').map(Number);
+		
+		return digits.every(digit => factDigits.includes(digit));
+	}
+	
+	let specialCount = 0;
+	
+	for (let i=0; i<array_length; i++){
+		let num = arr[i];
+		let finalSum = digitSum(num);
+		let factorialSum = factorial(finalSum);
+		
+		if(isSpecial(num, factorialSum)){
+			specialCount++;
+		}
+	}
+	
+	return specialCount;
+
+}
+
+
+-------------------------------------------------
+
+
+Angular :
+
+-------------------------------------------------
+player.service.ts :
+-------------------------------------------------
+
+getPlayer(id: number){
+	let player=this.players.find(p => p.id === id);
+	reutrn player;
+}
+
+addPlayer(player: Player){
+	this.players.push(player);
+	this.playersChanged.next(this.getPlayers());
+}
+
+updatePlayer(index: number, newPlayer: Player){
+	newPlayer.description = 'Bowler';
+	this.players[index - 1] = newPlayer;
+	this.playersChanged.next(this.getPlayers());
+}
+
+deletePlayer(index: number){
+	this.players.splice(index, 1);
+	this.playersChanged.next(getPlayers());
+}
+
+-------------------------------------------------
+team.service.ts
+-------------------------------------------------
+
+editPlayer(id: number, nwPlayer: Player){
+	const index = this.team.findIndex(p => p.id === id);
+	this.team[index] = nwPlayer;
+}
+
+addPlayer(player: Player){
+	const playerExist = this.team.find(p => p.id === player.id);
+	if(playerExist){
+		alert('This player already exists in team !');
+	}else{
+		this.team.push(player);
+	}
+}
+
+deletePlayer(id: number){
+	this.team=this.team.filter(p => p.id !== id);
+}
+
+getStatus(){
+	vat status: string[] =[];
+	const noOfBatsmen = this.getTeam().filter(p => p.description === 'Batsmen').length;
+	const noOfBowlers = this.getTeam().filter(p => p.description === 'Bowler').length;
+	const noOfWicketKeepers = this.getTeam().filter(p => p.description === 'Wicket Keeper').length;
+	
+	if(noOfBatsmen !== 2){
+		status.push('You do not have enough no. of Batsmen');
+	}
+	
+	if(noOfBowlers !== 2){
+		status.push('You do not have enough no. of Bowlers');
+	}
+	
+	if(noOfWicketKeepers !== 2){
+		status.push('You do not have enough no. of Wicket keepers');
+	}
+	
+	return status;
+}
+-------------------------------------------------
+
+retest 
+
+-------------------------------------------------
+
+calculateBuyerWithMostSale( salesData: Observable<Sales[]>): Observable<{buyerName: String, saleTotal: number}> {
+	return salesData.pipe(
+		map( (sales) => sales.reduce( (mostSales, sale)=>(sale.saleTotal > mostSales.saleTotal? sale : mostSales,{buyerName:"",saleTotal:0} ) ) )
+	);
+}
+
+(sale.saleTotal > mostSales.saleTotal? sale : mostSales,{buyerName:"",saleTotal:0} )

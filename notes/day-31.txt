@@ -1,0 +1,14 @@
+(23-08-2024)
+-------------------------------------------------
+
+	Project Consideration :
+		. Project -> Scope -> Quality -> Time -> Cost/Budget
+		. Document -> Development -> Testing -> Presentation
+
+	Project Presentation :
+		. Responsive
+		. Testing
+		. DAO layers, layered architecture
+		. 
+		
+-------------------------------------------------
